@@ -1,0 +1,35 @@
+image: python:3.11
+
+stages:
+  - quality
+  - test
+  - deploy
+
+before_script:
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+lint:
+  stage: quality
+  script:
+    - ruff check src tests
+
+tests:
+  stage: test
+  script:
+    - pytest tests/ -v
+
+deploy_dev:
+  stage: deploy
+  script:
+    - echo "Déploiement automatisé du job Databricks en environnement dev"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+
+deploy_prod:
+  stage: deploy
+  script:
+    - echo "Déploiement du job Databricks en production"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  when: manual

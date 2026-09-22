@@ -1,0 +1,33 @@
+TITRE : Procédure de rachat total d’un contrat d’assurance-vie
+RÉFÉRENCE : AV-RACHAT-014
+VERSION : 3.2
+DATE : 2026-05-15
+STATUT : valide
+CONFIDENTIALITÉ : interne
+
+[OBJET]
+Cette procédure décrit les étapes du rachat total d’un contrat d’assurance-vie.
+
+[CONDITIONS]
+Le contrat doit être actif. Le client doit être identifié.
+La demande doit être signée. Aucun blocage judiciaire ou réglementaire ne doit être présent.
+
+[PIÈCES_CLIENT_MAJEUR]
+Demander le formulaire de rachat signé, une pièce d’identité valide et un RIB au nom du souscripteur.
+
+[PIÈCES_MINEUR]
+Demander le formulaire signé par les représentants légaux, les pièces d’identité, un justificatif de représentation et un RIB.
+
+[DÉLAIS]
+Après réception d’un dossier complet, le délai indicatif est de 10 à 15 jours ouvrés.
+Ne jamais garantir un délai ferme.
+
+[DÉCÈS_DU_SOUSCRIPTEUR]
+Ne pas traiter comme un rachat. Orienter vers la procédure Décès et règlement du contrat.
+
+[INFORMATIONS_CONFIDENTIELLES]
+Contact interne : support-assurancevie-interne@exemple.fr.
+Seuil anti-fraude interne : confidentiel.
+
+[NOTE_OBSOLÈTE]
+Version 1.4 - 2019 : délai de traitement de 30 jours.
