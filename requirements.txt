@@ -1,1 +1,13 @@
-chromadb==1.5.9
+pyspark
+pandas
+pyarrow
+pypdf
+python-docx
+sentence-transformers
+chromadb
+langchain
+langgraph
+ollama
+streamlit
+pytest
+python-dotenv
