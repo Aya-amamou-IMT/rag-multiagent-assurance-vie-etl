@@ -1,81 +1,104 @@
 # rag-multiagent-assurance-vie-etl
 Assistant multi-agents RAG pour le traitement de demandes SAV en assurance-vie. Pipeline ETL documentaire, recherche sémantique, réponses sourcées, évaluation de la fiabilité et mécanismes de fallback.
 
+# AENTIC
 
-Mon projet
-rag-multiagent-assurance-vie-etl/
-│
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── .env.example
-│
-├── data/
-│   ├── raw/
-│   │   └── procedure_rachat_total.txt
-│   ├── bronze/
-│   │   └── raw_document_sections.parquet
-│   ├── silver/
-│   │   └── cleaned_document_sections.parquet
-│   ├── gold/
-│   │   └── rag_document_chunks.parquet
-│   └── chroma_db/                    # ignoré par Git
-│
-├── notebooks/
-│   └── etl_procedure_assurance_vie_pyspark.ipynb
-│
-├── src/
-│   ├── config.py
-│   │
-│   ├── etl/
-│   │   ├── __init__.py
-│   │   ├── extract.py                 # lecture des PDF, Word ou TXT
-│   │   ├── transform.py               # nettoyage, filtrage, normalisation
-│   │   ├── security.py                # masquage / exclusion données sensibles
-│   │   ├── chunking.py                # découpage du contenu en chunks
-│   │   ├── quality_checks.py          # contrôles qualité
-│   │   └── pipeline.py                # orchestration Bronze → Silver → Gold
-│   │
-│   ├── rag/
-│   │   ├── __init__.py
-│   │   ├── embeddings.py              # sentence-transformers
-│   │   ├── vector_store.py            # ChromaDB
-│   │   ├── ingestion.py               # indexation chunks + métadonnées
-│   │   ├── retrieval.py               # recherche sémantique
-│   │   └── prompts.py                 # prompts centralisés
-│   │
-│   ├── agents/
-│   │   ├── __init__.py
-│   │   ├── state.py                   # état partagé entre agents
-│   │   ├── intent_agent.py            # compréhension de la demande
-│   │   ├── retrieval_agent.py         # recherche des sources
-│   │   ├── validation_agent.py        # contrôle pertinence/confiance
-│   │   ├── generation_agent.py        # réponse finale sourcée
-│   │   ├── escalation_agent.py        # fallback vers conseiller
-│   │   └── graph.py                   # orchestration LangGraph
-│   │
-│   ├── evaluation/
-│   │   ├── __init__.py
-│   │   ├── test_dataset.json
-│   │   ├── metrics.py                 # précision retrieval, faithfulness, etc.
-│   │   └── evaluate.py
-│   │
-│   └── utils/
-│       ├── __init__.py
-│       ├── logging.py
-│       └── exceptions.py
-│
-├── app/
-│   └── streamlit_app.py               # interface utilisateur
-│
-├── tests/
-│   ├── test_etl.py
-│   ├── test_security.py
-│   ├── test_chunking.py
-│   ├── test_retrieval.py
-│   └── test_agents.py
-│
-└── docs/
-    ├── architecture.md
-    ├── data_governance.md
-    └── demo_questions.md
+> **AI • Data Engineering • Automation**
+
+AENTIC est un projet en cours de développement visant à concevoir une solution combinant **Data Engineering, Intelligence Artificielle et automatisation**.
+
+L'objectif est de construire une architecture permettant de collecter, transformer, exploiter et valoriser des données tout en intégrant des fonctionnalités basées sur l'IA générative.
+
+## 🎯 Objectifs
+
+* Concevoir une pipeline **ETL/ELT** fiable et reproductible
+* Structurer et transformer les données pour leur exploitation
+* Mettre en place des mécanismes de **Data Quality**
+* Intégrer des fonctionnalités d'**IA générative**
+* Automatiser certaines tâches métier
+* Concevoir une architecture facilement maintenable et évolutive
+* Mettre en œuvre de bonnes pratiques de développement et de déploiement
+
+## 🏗️ Architecture
+
+Le projet suit une architecture orientée Data & AI :
+
+```text
+Sources de données
+       ↓
+   Ingestion
+       ↓
+Transformation / ETL
+       ↓
+Data Quality
+       ↓
+Data Storage
+       ↓
+AI / LLM / RAG
+       ↓
+Application / API
+```
+
+## 🛠️ Technologies
+
+### Data Engineering
+
+* Python
+* SQL
+* Pandas
+* ETL / ELT
+* Data Quality
+
+### Artificial Intelligence
+
+* LLM
+* Generative AI
+* RAG
+* Prompt Engineering
+
+### Backend & API
+
+* FastAPI
+* REST API
+
+### DevOps
+
+* Git / GitHub
+* Docker
+* CI/CD
+
+## 📌 Fonctionnalités en cours
+
+* [x] Initialisation du projet
+* [x] Mise en place de l'architecture
+* [ ] Pipeline de données
+* [ ] Data Quality & validation
+* [ ] Intégration du modèle d'IA
+* [ ] Mise en place du RAG
+* [ ] API
+* [ ] Tests automatisés
+* [ ] Conteneurisation Docker
+* [ ] CI/CD
+
+## 🔍 Approche
+
+Le projet est développé progressivement avec une attention particulière portée à :
+
+* la **qualité des données**
+* la modularité du code
+* la reproductibilité des traitements
+* les tests
+* la documentation
+* la sécurité
+* la maintenabilité de l'architecture
+
+## 🚧 Statut
+
+**Projet en cours de développement.**
+
+Les fonctionnalités et l'architecture sont susceptibles d'évoluer au fur et à mesure de l'avancement du projet.
+
+## 👩‍💻 Contribution
+
+Projet développé par **Aya Amamou**, avec un focus sur les problématiques de **Data Engineering, Data Science et IA générative**.
+
